@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Python Flask Application</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/stylesheets/style.css">
+  </head>
+
+  <body>
+ <div class="container">
+   <h2>Upload your file!!</h2>
+   <form id="upload_form" action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept="uploaded_files/*" multiple><br><br>
+      <input type="submit" name="upload" value="Upload">
+   </form>
+     <hr>
+     <hr>
+     <h2>Download the file!! </h2>
+   <form id="download_form" action="/download" method="POST">
+     File Name: <input type="text" name="filename" placeholder="Enter file name to download"><br><br>
+       Version: <input type="text" name="version" placeholder="Enter version of file to download"><br><br>
+     <input type="submit" name="download" value="download">
+   </form>
+   <hr>
+     <hr>
+   <h2>Delete a file!!</h2>
+   <form id="delete_form" action="/delete" method="POST">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+       Version: <input type="text" name="version" placeholder="Enter version of file to download"><br><br>
+     <input type="submit" name="delete" value="delete">
+   </form>
+   <hr>
+     <hr>
+      <h2>List all the files!!</h2>
+   <form id="list_form" action="/list_files" method="POST">
+     <input type="submit" name="list" value="list">
+   </form>
+   <hr>
+     <hr>
+  </div>
+ </body>
+
+</html>
